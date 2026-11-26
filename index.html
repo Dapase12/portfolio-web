@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Daniel Alejandro Patiño Sepúlveda, MD — Physician, Clinical AI Evaluator, Health Data &amp; Digital Health. Portfolio, peer-reviewed publications, and humanitarian health experience."
+  />
+  <title>Daniel Alejandro Patiño Sepúlveda, MD | Clinical AI · Health Data · Digital Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    ::selection { background: #2563eb; color: #ffffff; }
+    .glass {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .dark .card-hover:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35); }
+    .timeline-line { position: relative; padding-left: 30px; }
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      bottom: 2px;
+      width: 1px;
+      background: #e2e8f0;
+    }
+    .dark .timeline-line::before { background: #334155; }
+    .timeline-marker {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #2563eb;
+      background: #ffffff;
+    }
+    .dark .timeline-marker { background: #0f172a; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .card-hover:hover { transform: none; box-shadow: none; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:dark:bg-slate-800 focus:text-slate-900 focus:dark:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+  <!-- ============================ NAV ============================ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass bg-white/70 dark:bg-slate-900/80 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="chip bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 border border-brand-200 dark:border-brand-800/50 px-3 py-1.5 rounded-full shrink-0">MD</span>
+        <a href="#hero" class="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white truncate">
+          Daniel Alejandro Patiño Sepúlveda, <span class="text-brand-600 dark:text-brand-400">MD</span>
+        </a>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+        <a href="#hero" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Home</a>
+        <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
+        <a href="#publications" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Publications</a>
+        <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+        <a href="#certifications" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Certifications</a>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+          class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <a href="assets/CV_Daniel_Patino_MD.pdf" download="CV_Daniel_Patino_MD.pdf"
+          class="hidden sm:inline-flex items-center bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors">
+          Download CV
+        </a>
+        <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+          class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <div class="px-6 py-4 space-y-3 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#hero" class="block hover:text-brand-600 dark:hover:text-brand-400">Home</a>
+        <a href="#projects" class="block hover:text-brand-600 dark:hover:text-brand-400">Projects</a>
+        <a href="#publications" class="block hover:text-brand-600 dark:hover:text-brand-400">Publications</a>
+        <a href="#experience" class="block hover:text-brand-600 dark:hover:text-brand-400">Experience</a>
+        <a href="#certifications" class="block hover:text-brand-600 dark:hover:text-brand-400">Certifications</a>
+        <a href="assets/CV_Daniel_Patino_MD.pdf" download="CV_Daniel_Patino_MD.pdf" class="block text-brand-600 dark:text-brand-400 font-semibold">Download CV (PDF)</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content">
+
+    <!-- ============================ HERO ============================ -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-5 sm:px-6 pt-28 md:pt-36 pb-20 md:pb-28">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold tracking-[0.18em] text-brand-600 dark:text-brand-400 uppercase mb-6">
+          Professional Portfolio · Clinical AI · Health Data
+        </p>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.08] mb-6">
+          Daniel Alejandro Patiño Sepúlveda,<br />
+          <span class="text-brand-600 dark:text-brand-400">MD</span>
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-300 font-medium mb-8 max-w-2xl">
+          Medical Doctor (UCV, Cum Laude) · Clinical AI Evaluator, Health Data &amp; Digital Health
+        </p>
+        <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-10 max-w-2xl">
+          Physician (Universidad Central de Venezuela, 2026) working at the intersection of clinical medicine, health data, and artificial intelligence.
+          Author of <strong class="text-slate-900 dark:text-white">5 peer-reviewed publications</strong> in infectious diseases and maternal-fetal medicine,
+          with machine-learning research on malaria triage (n=570; CART model: 85.4% accuracy, 93.5% sensitivity).
+          Led humanitarian health programs across <strong class="text-slate-900 dark:text-white">8 Venezuelan states — 15,000+ patients</strong>, including earthquake disaster response.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="assets/CV_Daniel_Patino_MD.pdf" download="CV_Daniel_Patino_MD.pdf"
+            class="inline-flex items-center gap-2 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-5 py-3 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg hover:bg-slate-800 dark:hover:bg-slate-200 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download CV (PDF)
+          </a>
+          <a href="https://linkedin.com/in/daniel-alejandro-pati%C3%B1o-sep%C3%BAlveda-0166382a8" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center glass bg-white/80 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-white dark:hover:bg-slate-800 transition-colors">
+            LinkedIn
+          </a>
+          <a href="https://github.com/Dapase12" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center glass bg-white/80 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-white dark:hover:bg-slate-800 transition-colors">
+            GitHub
+          </a>
+          <a href="https://orcid.org/0009-0009-4627-0798" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center glass bg-white/80 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-white dark:hover:bg-slate-800 transition-colors">
+            ORCID
+          </a>
+          <a href="mailto:dapase3@gmail.com"
+            class="inline-flex items-center glass bg-white/80 dark:bg-slate-800/80 border border-slate-200/70 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 px-5 py-3 rounded-xl text-sm font-semibold hover:bg-white dark:hover:bg-slate-800 transition-colors">
+            Email
+          </a>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-400 dark:text-slate-500">
+          <span>Caracas, Venezuela</span>
+          <span class="hidden sm:inline">·</span>
+          <a href="tel:+584242768007" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">+58 424 276 8007</a>
+          <span class="hidden sm:inline">·</span>
+          <a href="mailto:dapase3@gmail.com" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">dapase3@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section id="projects" class="max-w-7xl mx-auto px-5 sm:px-6 pb-20 md:pb-28">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">
+            Clinical AI, Apps &amp; Machine Learning Projects
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400">
+            Applied clinical research, health-data engineering, and digital-health prototypes.
+          </p>
+        </div>
+        <a href="https://github.com/Dapase12" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+          View on GitHub <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Featured: Malaria ML thesis -->
+        <article class="card-hover rounded-2xl border border-brand-200 dark:border-brand-800/60 bg-white dark:bg-slate-900 p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="chip bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-400 border border-brand-100 dark:border-brand-800/30">Featured</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">ML Thesis · 2026</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Malaria Triage &amp; Phenotyping with Machine Learning
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            <strong class="text-slate-900 dark:text-white">Clinical problem:</strong>
+            Identify which <em>Plasmodium falciparum</em> patients face the highest risk of severe outcomes so triage and treatment can be prioritized at a Venezuelan reference center.
+          </p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technical stack</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Python</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">scikit-learn</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">CART · PAM</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">R</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Geospatial analysis</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">
+              <strong class="text-slate-900 dark:text-white">Results:</strong>
+              Retrospective cohort (n=570, 2017–2026). Three clinical phenotypes identified; CART accuracy
+              <strong class="text-slate-900 dark:text-white">85.4%</strong> (95% CI: 82.4–88.1%); sensitivity
+              <strong class="text-slate-900 dark:text-white">93.5%</strong> for the highest-risk group.
+            </p>
+            <a href="https://github.com/Dapase12" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              GitHub: clinical data pipelines →
+            </a>
+            <p class="mt-2 text-xs text-slate-400 dark:text-slate-500">Thesis, UCV School of Medicine · Manuscript in preparation</p>
+          </div>
+        </article>
+
+        <!-- Teddy Bear Hospital -->
+        <article class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Digital Health Education · 2025</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Teddy Bear Hospital — Pediatric Health Education
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            <strong class="text-slate-900 dark:text-white">Clinical problem:</strong>
+            Medical anxiety in young children. Built a ludic health-education program with clinical simulation stations for 200+ children (ages 6–7).
+          </p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technical stack</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Health education design</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Clinical simulation</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Program evaluation</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">
+              <strong class="text-slate-900 dark:text-white">Outcome:</strong>
+              1st Place Digital Poster — UCV Faculty Congress 2025; published in <em>Revista Científica CMDLT</em>.
+            </p>
+            <a href="https://doi.org/10.55361/cmdlt.v20i.467" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              Read publication (DOI) →
+            </a>
+          </div>
+        </article>
+
+        <!-- Clinical Case Series -->
+        <article class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Clinical Research · 2023–2026</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Clinical Case Series — Diagnostic Reasoning in Infectious Diseases
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            <strong class="text-slate-900 dark:text-white">Clinical problem:</strong>
+            Rare and atypical presentations of infectious diseases. Documented five peer-reviewed cases: HIV/AIDS, disseminated histoplasmosis, molar pregnancy.
+          </p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technical stack</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Case documentation</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Differential diagnosis</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Scientific writing</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">IRB / ethics</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">
+              <strong class="text-slate-900 dark:text-white">Outcome:</strong>
+              2 cases presented internationally (ISSTD Brazil 2025); 2nd Place Clinical Cases — XII CCIEM 2025.
+            </p>
+            <a href="https://orcid.org/0009-0009-4627-0798" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              Full record on ORCID →
+            </a>
+          </div>
+        </article>
+
+        <!-- Preventive campaigns M&E -->
+        <article class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Public Health Data · 2023–Present</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Preventive Health Campaigns — M&amp;E and Surveillance (8 States)
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            <strong class="text-slate-900 dark:text-white">Clinical problem:</strong>
+            No consistent tracking of chronic-disease screening outcomes across mass campaigns. Designed and implemented M&amp;E frameworks for hypertension, diabetes, and malnutrition screening.
+          </p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technical stack</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">M&amp;E</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Epidemiology</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Data cleaning (R, Python)</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Program management</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">
+              <strong class="text-slate-900 dark:text-white">Outcome:</strong>
+              15,000+ patients and 20,000+ consultations across national campaigns in Mérida, Aragua, Lara, Miranda, Cojedes, Sucre, Portuguesa and La Guaira.
+            </p>
+            <a href="https://github.com/Dapase12" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              GitHub: data pipelines →
+            </a>
+          </div>
+        </article>
+
+        <!-- Epidemiological data analysis -->
+        <article class="card-hover rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Health Data Analysis · 2025</span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            Epidemiological Data Analysis with Python
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            <strong class="text-slate-900 dark:text-white">Clinical problem:</strong>
+            Screening and epidemiological data were scattered and hard to interpret. Applied Python (pandas, data cleaning, visualization) to turn them into decision-ready summaries.
+          </p>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Technical stack</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Python</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">pandas</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Data visualization</span>
+            <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Google Data Analytics certified</span>
+          </div>
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-2">
+              <strong class="text-slate-900 dark:text-white">Outcome:</strong>
+              Google Data Analytics (2 courses) — Coursera, 2025. Foundation for clinical AI evaluation work.
+            </p>
+            <a href="https://github.com/Dapase12" target="_blank" rel="noopener noreferrer"
+              class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
+              GitHub: analysis notebooks →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================ PUBLICATIONS ============================ -->
+    <section id="publications" class="max-w-7xl mx-auto px-5 sm:px-6 pb-20 md:pb-28">
+      <div class="mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">
+          Publications &amp; Academic Recognition
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400">
+          Peer-reviewed research in infectious diseases, maternal-fetal medicine, and health education.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-200">
+            <span class="font-semibold text-slate-900 dark:text-white">Patiño Sepúlveda DA, et al.</span> (2026).
+            <em>Impact of the ludic “Teddy Bear Hospital” project on anxiety reduction in schoolchildren.</em>
+            Revista Científica CMDLT 20:467.
+          </p>
+          <a href="https://doi.org/10.55361/cmdlt.v20i.467" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline shrink-0">DOI →</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-200">
+            <span class="font-semibold text-slate-900 dark:text-white">Patiño Sepúlveda DA, et al.</span> (2026).
+            <em>Acquired immunodeficiency syndrome. Unusual presentation.</em>
+            Medicina Interna de Venezuela 42(1):57–61.
+          </p>
+          <a href="https://doi.org/10.71035/RSVMI.2026.42.1.10" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline shrink-0">DOI →</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-200">
+            <span class="font-semibold text-slate-900 dark:text-white">Patiño Sepúlveda DA, et al.</span> (2025).
+            <em>Clinical Case “Molar Pregnancy coexisting with live fetus: a case report”.</em>
+            ACE, ISSN 2542-3428.
+          </p>
+          <a href="https://orcid.org/0009-0009-4627-0798" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline shrink-0">ORCID →</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-200">
+            <span class="font-semibold text-slate-900 dark:text-white">Patiño Sepúlveda DA, et al.</span> (2023).
+            <em>Debut of AIDS and coinfections: importance of active research for differential diagnosis. Case report.</em>
+            Acta Científica Estudiantil 15(S1):17.
+          </p>
+          <a href="https://orcid.org/0009-0009-4627-0798" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline shrink-0">ORCID →</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-200">
+            <span class="font-semibold text-slate-900 dark:text-white">Patiño Sepúlveda DA, et al.</span> (2023).
+            <em>Disseminated histoplasmosis in an HIV/AIDS-naive patient.</em>
+            Acta Científica Estudiantil 15(S1):17.
+          </p>
+          <a href="https://orcid.org/0009-0009-4627-0798" target="_blank" rel="noopener noreferrer"
+            class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline shrink-0">ORCID →</a>
+        </div>
+      </div>
+
+      <h3 class="mt-12 mb-4 text-lg font-bold text-slate-900 dark:text-white">Academic Recognition</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">Student Merit Award 2025</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">UCV — Research Mention &amp; Social Volunteering Mention</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">1st Place Digital Poster</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">UCV Faculty Congress 2025 — Teddy Bear Hospital</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">2nd Place Clinical Cases</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">XII CCIEM 2025 — Molar pregnancy coexisting with live fetus</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">1st Place AMBOSS–Razetti Challenge</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">SOCIEM UCV &amp; SVMI 2023</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">Microbiology Chair Award</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">“Dr. Jesús Rafael Risquez” — UCV 2023</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">3rd Place Clinical Cases</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">XI CCIEM 2024 — AIDS debut and coinfections</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">Student Research Sponsorship</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Public Health Chair, UCV 2025</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">Congress Posters</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">ISSTD Brazil 2025 · UCV Faculty Congress 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ EXPERIENCE ============================ -->
+    <section id="experience" class="max-w-7xl mx-auto px-5 sm:px-6 pb-20 md:pb-28">
+      <div class="mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">
+          Clinical &amp; Humanitarian Experience
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400">
+          A timeline of clinical practice, program leadership, and disaster response.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+
+        <div class="timeline-line">
+          <div class="timeline-marker"></div>
+          <div>
+            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">2026 – Present</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-1">Outpatient Clinical Practice</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">IVSS Los Cortijos · Caracas, Venezuela</p>
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+              Ambulatory clinical care and patient management in a primary care setting.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-line">
+          <div class="timeline-marker"></div>
+          <div>
+            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">2024 – Present</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-1">
+              Director General → Finance Subcoordinator → Volunteer Physician
+            </h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Fundación Vive Más · Caracas, Venezuela</p>
+            <ul class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl space-y-2 list-disc list-inside">
+              <li>Directed strategic planning and operational execution of the Preventive Medical Program across 8 states; <strong class="text-slate-900 dark:text-white">15,000+ patients and 20,000+ consultations</strong> via national campaigns.</li>
+              <li>Led clinical screening for chronic diseases (hypertension, diabetes, malnutrition), gynecological cytology, and psychological assistance.</li>
+              <li>Led humanitarian emergency response after the <strong class="text-slate-900 dark:text-white">La Guaira earthquake</strong> — triage zones, personnel mobilization, and critical supply distribution in collapse areas.</li>
+              <li>Managed program finances (2023–2024): budgeting, resource allocation, donor reporting, and financial compliance for multi-state operations.</li>
+              <li>Designed and implemented M&amp;E frameworks for program indicators, disease tracking, and campaign impact assessment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-line">
+          <div class="timeline-marker"></div>
+          <div>
+            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">2023 – 2025</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-1">
+              Full Member (SOCIEM) &amp; Academic Affairs Representative
+            </h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Medical Students Scientific Society (SOCIEM) / UCV Student Center · Caracas, Venezuela</p>
+            <ul class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl space-y-2 list-disc list-inside">
+              <li>Promoted medical research protocol development at the Luis Razetti School of Medicine; mentored students in protocol design and ethics.</li>
+              <li>Organized academic training — workshops, journal clubs, and congress participation — strengthening educational quality.</li>
+              <li>Coordinated the 1st Place Digital Poster project “Teddy Bear Hospital” (UCV Faculty Congress 2025).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-line">
+          <div class="timeline-marker"></div>
+          <div>
+            <span class="text-xs font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wider">2018 – 2020</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-1">Volunteer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Senos Ayuda · Caracas, Venezuela</p>
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+              Operational and logistical support for national breast cancer awareness, prevention, and early screening campaigns.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ CERTIFICATIONS & SKILLS ============================ -->
+    <section id="certifications" class="max-w-7xl mx-auto px-5 sm:px-6 pb-20 md:pb-28">
+      <div class="mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">
+          Certifications &amp; Core Skills
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400">
+          Focused, recent credentials across AI, telehealth, and clinical research.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-slate-800">
+            AI &amp; Health Data
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Generative AI for Healthcare</p>
+              <p class="text-slate-500 dark:text-slate-400">Google Cloud Skills Boost · 2026</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Evaluations of AI Applications in Healthcare</p>
+              <p class="text-slate-500 dark:text-slate-400">Coursera · 2026</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Google Data Analytics (2 courses)</p>
+              <p class="text-slate-500 dark:text-slate-400">Coursera · 2025</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Python for Data Analysis</p>
+              <p class="text-slate-500 dark:text-slate-400">pandas · data cleaning · visualization</p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-slate-800">
+            Telehealth &amp; Digital Health
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Integration of Telehealth in Primary Care with Simulation Models</p>
+              <p class="text-slate-500 dark:text-slate-400">PAHO / Virtual Campus of Public Health (CVSP) · 2026 · 40h · 90% grade</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Cycle III: Telesalud y Telemedicina (Telehealth &amp; Telemedicine)</p>
+              <p class="text-slate-500 dark:text-slate-400">PAHO / CVSP · 2026 · 5h · 100% grade</p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 pb-2 border-b border-slate-200 dark:border-slate-800">
+            Clinical Research &amp; Ethics
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Public Health Ethics</p>
+              <p class="text-slate-500 dark:text-slate-400">Pan American Health Organization (PAHO) · 2025</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">INSO NGO Security Management</p>
+              <p class="text-slate-500 dark:text-slate-400">International NGO Safety Organisation / DisasterReady · 2026 · 4h</p>
+            </li>
+            <li>
+              <p class="font-semibold text-slate-900 dark:text-white">Clinical EKG</p>
+              <p class="text-slate-500 dark:text-slate-400">Clínica El Ávila / Proyecto Mayu · 2023</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="mt-12">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Languages</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+            <span class="font-semibold text-slate-900 dark:text-white">Spanish</span>
+            <span class="text-slate-500 dark:text-slate-400 ml-2">— Native</span>
+          </div>
+          <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+            <span class="font-semibold text-slate-900 dark:text-white">English</span>
+            <span class="text-slate-500 dark:text-slate-400 ml-2">— C1/C2 (Professional Working Proficiency)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Core Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Clinical Research</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Evidence-Based Medicine</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Medical Data Analysis (R, Python, STATA)</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Epidemiology &amp; Surveillance</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Program Management &amp; Leadership</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Monitoring &amp; Evaluation (M&amp;E)</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Disaster &amp; Humanitarian Health</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Maternal-Fetal Medicine</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Infectious Diseases</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Scientific Writing</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Git / GitHub</span>
+          <span class="chip bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-transparent">Bash &amp; Python Automation</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+      <div class="font-semibold text-slate-900 dark:text-white text-center md:text-left">
+        Daniel Alejandro Patiño Sepúlveda, MD <span class="font-normal text-slate-400 dark:text-slate-500">— Clinical AI · Health Data · Digital Health</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <span>Caracas, Venezuela</span>
+        <a href="tel:+584242768007" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">+58 424 276 8007</a>
+        <a href="mailto:dapase3@gmail.com" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">dapase3@gmail.com</a>
+      </div>
+      <div class="text-xs">© 2026 Daniel Alejandro Patiño Sepúlveda, MD.</div>
+    </div>
+  </footer>
+
+  <!-- ============================ SCRIPTS ============================ -->
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var themeToggle = document.getElementById('theme-toggle');
+      var sunIcon = document.getElementById('theme-icon-sun');
+      var moonIcon = document.getElementById('theme-icon-moon');
+      var THEME_KEY = 'dp-portfolio-theme';
+
+      function updateIcon(isDark) {
+        if (!sunIcon || !moonIcon) return;
+        sunIcon.style.display = isDark ? 'block' : 'none';
+        moonIcon.style.display = isDark ? 'none' : 'block';
+      }
+
+      function applyTheme(theme) {
+        var isDark = theme === 'dark';
+        html.classList.toggle('dark', isDark);
+        html.classList.toggle('light', !isDark);
+        try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+        updateIcon(isDark);
+      }
+
+      var saved = null;
+      try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
+      if (saved === 'dark' || saved === 'light') {
+        applyTheme(saved);
+      } else {
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+      }
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+          var isDark = html.classList.contains('dark');
+          applyTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          var isHidden = mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(!isHidden));
+        });
+        mobileMenu.addEventListener('click', function (event) {
+          if (event.target.tagName === 'A') {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
